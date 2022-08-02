@@ -1,0 +1,67 @@
+1. To run Django server
+
+python manage.py runserver
+
+2. to create superuser
+
+python manage.py createsuperuser
+
+3. to migrate updated db tables
+
+python manage.py makemigrations
+
+4. after makemigration command run this to make changes in db
+
+python manage.py migrate
+
+5. project superuser
+
+user/password : Sumit / admin@123
+TestUser / sumit@123
+email : sumitkumarsingh0303@gmail.com
+
+6. To see the sql of current migration
+Migrations for 'blog':
+  blog\migrations\0001_initial.py
+    - Create model Post
+
+python manage.py sqlmigrate blog 0001
+
+
+7. get all post of a particular user
+
+a) get user first
+b) use syntax .modelname_set
+
+i.e
+
+user = User.objects.all().first()
+all_post = user.post_set
+
+8. to see post in admin dashboard -
+
+we need to register your model in admin.py of the model
+
+*****Steps to creat apps****
+9.a. Create a app like 'users':
+
+python manage.py startapp users
+
+9.b. register newly created app:
+    got to project setting -> INSTALLED_APPS -> add your app
+    i.e 'users.apps.UsersConfig',
+
+10. Created forms.py in User app to override built-in register form
+
+11. Crispy_forms to desgin form in better way
+
+12. user.is_validated/ user.username here user is the current logged in user; we no need to pass any where
+
+13. in project setting.py add media roo and url which will valid irrespective of os/filesystem with full path
+
+14. signals: Once user is registering the creating profile for the user
+
+15. PIL to resize image
+
+gmail id= susumit8478@gmail.com
+gmail password : tjxlutlibldsbkyd
